@@ -38,7 +38,7 @@ var map = new ol.Map({
 
 new nyc.ol.LocationMgr({
   map: map,
-  url: 'https://geoclient.apps.pcf.nycnet/search.json?'
+  url: GEOCLIENT_URL
 });
 
 $('input').change(function() {
