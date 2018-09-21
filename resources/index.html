@@ -19,6 +19,7 @@
       font-family: sans-serif;
     }
     #map, form {
+      display: block;
       position: fixed;
       top: 0;
     }
@@ -28,23 +29,42 @@
       right: 0;
     }
     form {
+      background-color: rgba(0,0,0,0.4);
+    }
+    form label {
+      color: #fff;
+      font-weight: bold;
+    }
+    form.layer {
       right: 0;
+      padding: 10px;
+    }
+    form.view {
+      top: auto;
+      right: 0;
+      bottom: 0;
       padding: 10px;
     }
     form>input {
       height: 12px;
-    }
+    }  
   </style>
 </head>
 <body>
   <div id="map"></div>
-  <form>
+  <form class="layer">
     <input id="wms" name="layer" type="radio" value="wms" checked>
     <label for="wms">Single image WMS</label><br>
     <input id="tile" name="layer" type="radio" value="tile">
     <label for="tile">Tiled WMS</label><br>
     <input id="tms" name="layer" type="radio" value="tms">
     <label for="tms">TMS</label>
+  </form>
+  <form class="view">
+    <input id="base" name="view" type="radio" value="base" checked>
+    <label for="base">Basemap</label><br>
+    <input id="tax" name="view" type="radio" value="tax">
+    <label for="tax">Taxmap</label><br>
   </form>
   <script src="config.js"></script>
   <script src="map.js"></script>
