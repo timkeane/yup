@@ -21,7 +21,8 @@ var wmsTax = new ol.layer.Image({
     },
     serverType: 'geoserver',
     transition: 0
-  })
+  }),
+  visible: false
 });
 
 var wmsTileBase = new ol.layer.Tile({
